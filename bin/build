@@ -59,7 +59,6 @@ cookbook_entry() {
       url: "https://github.com/\($repo)",
       owner: ($repo | split("/")[0]),
       description: ($settings.description | clean),
-      machines: ([($settings.machines // [])[] | clean | select(. != "")] | .[0:5]),
       kitchen: ($settings.kitchen | clean(20)),
       commit: $commit,
       pushed_at: (if $pushed_at == "" then null else $pushed_at end),
