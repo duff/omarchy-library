@@ -20,10 +20,10 @@ def clean: clean(160);
 
 def username: type == "string" and test("^[A-Za-z0-9-]{1,39}$");
 
-# One recipe's index entry, from {header, folder}.
+# One recipe's index entry, from {data, folder}.
 def recipe_entry($repo; $commit):
   .folder as $folder
-  | .header
+  | .data
   | {
       id,
       url: "https://github.com/\($repo)/blob/\($commit)/recipes/\($folder)/RECIPE.md",

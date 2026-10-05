@@ -46,7 +46,7 @@ cookbook_entry() {
     recipes=$(for file in "$dir"/recipes/*/RECIPE.md; do
       [[ -f $file ]] || continue
       folder=$(basename "$(dirname "$file")")
-      kitchen_header "$file" | jq -c --arg folder "$folder" '{header: ., folder: $folder}'
+      kitchen_data "$file" | jq -c --arg folder "$folder" '{data: ., folder: $folder}'
     done | jq -s .)
   fi
   settings=$(jq -c 'if type == "object" then . else {} end' "$dir/cookbook.json" 2>/dev/null || echo '{}')

@@ -20,10 +20,10 @@ assert_lacks() {
   ! grep -qF -- "$2" <<<"$1" || fail "expected not to find: $2"$'\n'"in:"$'\n'"$1"
 }
 
-# cookbook <owner> <description> <folder> <header jq filter> [<folder> <filter>]...
+# cookbook <owner> <description> <folder> <data jq filter> [<folder> <filter>]...
 # Writes $TEST_TMP/books/<owner>__omarchy-cookbook with the given recipes.
 cookbook() {
-  local owner=$1 description=$2 dir="$TEST_TMP/books/$1__omarchy-cookbook" folder filter header links
+  local owner=$1 description=$2 dir="$TEST_TMP/books/$1__omarchy-cookbook" folder filter data links
   shift 2
   mkdir -p "$dir/recipes"
   jq -n --arg o "$owner" --arg d "$description" '{owner: $o, kitchen: "v0.1.0", description: $d}' >"$dir/cookbook.json"
@@ -31,16 +31,16 @@ cookbook() {
   while (($#)); do
     folder=$1 filter=$2
     shift 2
-    header=$(jq -n --arg o "$owner" --arg f "$folder" '{
+    data=$(jq -n --arg o "$owner" --arg f "$folder" '{
       id: "\($o)/\($f)", title: "Title of \($f)", summary: "Fix it.", version: 1,
       tested_on: {omarchy: "4.0.4"}, applies_to: "Every machine.", requires: [], touches: [],
       root: false, network: false, installs: [], runs: [], agent_config: false,
       history: [{who: $o, did: "created", date: "2026-09-01"}]
     }' | jq "$filter")
-    links=$(jq -r '.history[] | "- \(.did) by [@\(.who)](https://github.com/\(.who))."' <<<"$header")
+    links=$(jq -r '.history[] | "- \(.did) by [@\(.who)](https://github.com/\(.who))."' <<<"$data")
     mkdir -p "$dir/recipes/$folder"
-    printf -- '---\n%s\n---\n\n# %s\n\n## Problem\n\nX.\n\n## Fix\n\nY.\n\n## Apply and check\n\nZ.\n\n## Undo\n\nW.\n\n## History\n\n%s\n' \
-      "$header" "$(jq -r .title <<<"$header")" "$links" >"$dir/recipes/$folder/RECIPE.md"
+    printf -- '# %s\n\n## Problem\n\nX.\n\n## Fix\n\nY.\n\n## Apply and check\n\nZ.\n\n## Undo\n\nW.\n\n## History\n\n%s\n\n## Recipe data\n\n```json\n%s\n```\n' \
+      "$(jq -r .title <<<"$data")" "$links" "$data" >"$dir/recipes/$folder/RECIPE.md"
     echo "- [$folder](recipes/$folder/RECIPE.md)" >>"$dir/README.md"
   done
   echo "$dir"
@@ -71,7 +71,7 @@ test_groups_copies_by_id_and_counts_adaptations() {
 
 test_lists_failing_cookbooks_without_their_recipes() {
   dir=$(cookbook carol "Carol's recipes" broken '.')
-  echo "# No header" >"$dir/recipes/broken/RECIPE.md"
+  echo "# No recipe data" >"$dir/recipes/broken/RECIPE.md"
   build
   carol=$(jq -c '.cookbooks[0] | {passes_check, recipes}' "$TEST_TMP/out/index.json")
   assert_has "$carol" '{"passes_check":false,"recipes":[]}'
