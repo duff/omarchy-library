@@ -1,6 +1,6 @@
 {
   "built": "2026-10-05",
-  "checked_with": "v0.3.0",
+  "checked_with": "v0.5.0",
   "cookbooks": [
     {
       "repo": "duff/omarchy-cookbook",
