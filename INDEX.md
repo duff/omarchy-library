@@ -6,7 +6,7 @@ Built on 2026-10-05 from every public GitHub repo with the topic `omarchy-cookbo
 
 | Cookbook | About | Recipes | Updated |
 |---|---|---|---|
-| [duff/omarchy-cookbook](https://github.com/duff/omarchy-cookbook) | Customizations for a Dell XPS 16 with Apple Studio Displays, and an old MacBook Air that runs as a home server. | 66 | 2026-10-05 |
+| [duff/omarchy-cookbook](https://github.com/duff/omarchy-cookbook) | Duff's Omarchy customizations, one problem per recipe. | 66 | 2026-10-05 |
 
 ## Most applied
 
@@ -20,5 +20,5 @@ Recipes their authors marked as a better default or a bug workaround, most appli
 
 | Recipe | Kind | Cookbooks |
 |---|---|---|
-| [Super+J shows a Lua error on a scrolling-layout workspace](https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-j-error-on-scrolling-layout/RECIPE.md) | bug workaround | 1 |
+| [Super+J shows a Lua error on a scrolling-layout workspace](https://github.com/duff/omarchy-cookbook/blob/097affe/recipes/super-j-error-on-scrolling-layout/RECIPE.md) | bug workaround | 1 |
 
