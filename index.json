@@ -1,6 +1,6 @@
 {
   "built": "2026-10-05",
-  "checked_with": "v0.1.0",
+  "checked_with": "v0.2.0",
   "cookbooks": [
     {
       "repo": "duff/omarchy-cookbook",
@@ -11,16 +11,16 @@
         "Dell XPS 16 with three Apple Studio Displays",
         "MacBook Air with a T2 chip, running with the lid shut as a home server"
       ],
-      "kitchen": "v0.1.0",
-      "commit": "e3f1bcf",
-      "pushed_at": "2026-10-05T12:54:02Z",
+      "kitchen": "v0.2.0",
+      "commit": "7dc242d",
+      "pushed_at": "2026-10-05T13:15:59Z",
       "stars": 0,
       "passes_check": true,
       "problems": 0,
       "recipes": [
         {
           "id": "duff/agent-commit-messages-ignore-git-conventions",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/agent-commit-messages-ignore-git-conventions/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/agent-commit-messages-ignore-git-conventions/RECIPE.md",
           "title": "Coding agent writes long, unwrapped, or file-list commit messages",
           "summary": "Give coding agents one global rule for commit messages.",
           "version": 1,
@@ -46,7 +46,7 @@
         },
         {
           "id": "duff/agent-edits-a-different-project-than-its-session",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/agent-edits-a-different-project-than-its-session/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/agent-edits-a-different-project-than-its-session/RECIPE.md",
           "title": "Coding agent edits another project when a prompt goes to the wrong session",
           "summary": "Add a global agent rule that ties each session to the repo it was started in.",
           "version": 1,
@@ -72,7 +72,7 @@
         },
         {
           "id": "duff/agent-skips-the-omarchy-skill-in-a-config-repo",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/agent-skips-the-omarchy-skill-in-a-config-repo/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/agent-skips-the-omarchy-skill-in-a-config-repo/RECIPE.md",
           "title": "Coding agent skips the Omarchy skill when working in a dotfiles repo",
           "summary": "Add a repo CLAUDE.md that tells agents to always load the Omarchy skill.",
           "version": 1,
@@ -97,7 +97,7 @@
         },
         {
           "id": "duff/bar-and-menu-text-too-small",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/bar-and-menu-text-too-small/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/bar-and-menu-text-too-small/RECIPE.md",
           "title": "Bar and menu text too small, but the terminal font is fine",
           "summary": "Enlarge the shell font without changing terminals.",
           "version": 1,
@@ -122,7 +122,7 @@
         },
         {
           "id": "duff/bar-clock-shows-24-hour-time",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/bar-clock-shows-24-hour-time/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/bar-clock-shows-24-hour-time/RECIPE.md",
           "title": "Bar clock shows 24-hour time",
           "summary": "Switch the bar clock to a 12-hour format.",
           "version": 1,
@@ -147,7 +147,7 @@
         },
         {
           "id": "duff/battery-percentage-not-shown-in-the-bar",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/battery-percentage-not-shown-in-the-bar/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/battery-percentage-not-shown-in-the-bar/RECIPE.md",
           "title": "Battery percentage not shown in the bar",
           "summary": "Show the battery percentage next to the bar's battery icon.",
           "version": 1,
@@ -176,7 +176,7 @@
         },
         {
           "id": "duff/caps-lock-as-escape-and-hjkl-arrows",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/caps-lock-as-escape-and-hjkl-arrows/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/caps-lock-as-escape-and-hjkl-arrows/RECIPE.md",
           "title": "Make Caps Lock Escape on tap and hjkl arrows on hold",
           "summary": "Use keyd to make Caps Lock Escape on tap and a hjkl arrow layer on hold.",
           "version": 1,
@@ -206,7 +206,7 @@
         },
         {
           "id": "duff/chrome-privacy-warning-on-local-caddy-https-site",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/chrome-privacy-warning-on-local-caddy-https-site/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/chrome-privacy-warning-on-local-caddy-https-site/RECIPE.md",
           "title": "Chrome shows a privacy warning on a local Caddy HTTPS site",
           "summary": "Add Caddy's root certificate to Chrome's own store.",
           "version": 1,
@@ -235,7 +235,7 @@
         },
         {
           "id": "duff/claude-adds-co-authored-by-to-commits",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-adds-co-authored-by-to-commits/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-adds-co-authored-by-to-commits/RECIPE.md",
           "title": "Claude Code adds \"Co-Authored-By: Claude\" to my commits",
           "summary": "Turn off Claude Code's commit and pull request attribution.",
           "version": 1,
@@ -265,7 +265,7 @@
         },
         {
           "id": "duff/claude-asks-whether-to-push-after-committing",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-asks-whether-to-push-after-committing/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-asks-whether-to-push-after-committing/RECIPE.md",
           "title": "Claude Code commits but doesn't push, or asks whether to push",
           "summary": "Make commit and push one step with a global Claude Code rule.",
           "version": 1,
@@ -295,7 +295,7 @@
         },
         {
           "id": "duff/claude-changes-never-reach-the-mac",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-changes-never-reach-the-mac/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-changes-never-reach-the-mac/RECIPE.md",
           "title": "Claude Code changes made on Omarchy never reach my Mac",
           "summary": "Queue each Claude Code change as a GitHub issue in the Mac's config repo.",
           "version": 1,
@@ -328,7 +328,7 @@
         },
         {
           "id": "duff/claude-code-config-does-not-follow-to-other-machines",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-code-config-does-not-follow-to-other-machines/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-code-config-does-not-follow-to-other-machines/RECIPE.md",
           "title": "Claude Code settings and rules don't follow me to my other machines",
           "summary": "Track three files from ~/.claude, plus ~/.bashrc, in a dotfiles repo, and leave the rest of ~/.claude out.",
           "version": 1,
@@ -360,7 +360,7 @@
         },
         {
           "id": "duff/claude-feedback-survey-interrupts-sessions",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-feedback-survey-interrupts-sessions/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-feedback-survey-interrupts-sessions/RECIPE.md",
           "title": "Claude Code keeps asking \"How is Claude doing?\"",
           "summary": "Turn off Claude Code's session feedback survey.",
           "version": 1,
@@ -390,7 +390,7 @@
         },
         {
           "id": "duff/claude-sessions-look-alike-in-remote-control",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-sessions-look-alike-in-remote-control/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-sessions-look-alike-in-remote-control/RECIPE.md",
           "title": "Claude sessions can't be reached from my phone, or all look alike there",
           "summary": "Turn on Remote Control at startup and name each session after its project.",
           "version": 1,
@@ -424,7 +424,7 @@
         },
         {
           "id": "duff/claude-status-line-does-not-show-project-or-git-state",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-status-line-does-not-show-project-or-git-state/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-status-line-does-not-show-project-or-git-state/RECIPE.md",
           "title": "Claude Code's status line doesn't show the project or whether git is clean",
           "summary": "Show the model, effort, project, and a git check or cross in Claude Code's status line.",
           "version": 1,
@@ -456,7 +456,7 @@
         },
         {
           "id": "duff/compose-sequence-types-the-wrong-emoji",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/compose-sequence-types-the-wrong-emoji/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/compose-sequence-types-the-wrong-emoji/RECIPE.md",
           "title": "A Compose sequence types the wrong emoji, or the one I want is missing",
           "summary": "Override or add sequences in ~/.XCompose.",
           "version": 1,
@@ -481,7 +481,7 @@
         },
         {
           "id": "duff/compose-snippet-with-line-break-scrambled-in-chrome",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/compose-snippet-with-line-break-scrambled-in-chrome/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/compose-snippet-with-line-break-scrambled-in-chrome/RECIPE.md",
           "title": "A Compose snippet with a line break comes out scrambled in Chrome",
           "summary": "Commit a placeholder and type the lines with an fcitx5 Lua add-on and wtype.",
           "version": 1,
@@ -511,7 +511,7 @@
         },
         {
           "id": "duff/crash-notification-agent-changes-files-without-asking",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/crash-notification-agent-changes-files-without-asking/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/crash-notification-agent-changes-files-without-asking/RECIPE.md",
           "title": "Clicking \"Process crashed\" starts an agent that may change files without asking",
           "summary": "Open the crash diagnosis agent in plan mode, from your config repo.",
           "version": 1,
@@ -540,7 +540,7 @@
         },
         {
           "id": "duff/ctrl-enter-toggles-fullscreen-in-ghostty",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/ctrl-enter-toggles-fullscreen-in-ghostty/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/ctrl-enter-toggles-fullscreen-in-ghostty/RECIPE.md",
           "title": "Ctrl+Enter toggles fullscreen in Ghostty instead of reaching the app",
           "summary": "Send Ctrl+Enter to apps as a CSI-u sequence instead of toggling fullscreen.",
           "version": 1,
@@ -570,7 +570,7 @@
         },
         {
           "id": "duff/customizations-do-not-follow-to-other-machines",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/customizations-do-not-follow-to-other-machines/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/customizations-do-not-follow-to-other-machines/RECIPE.md",
           "title": "My Omarchy customizations don't follow me to my other machines",
           "summary": "A git overlay with a shared layer and a per-machine layer.",
           "version": 1,
@@ -604,7 +604,7 @@
         },
         {
           "id": "duff/desktop-shortcuts-appear-in-home-folder",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/desktop-shortcuts-appear-in-home-folder/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/desktop-shortcuts-appear-in-home-folder/RECIPE.md",
           "title": "Desktop shortcuts appear in the home folder",
           "summary": "Create ~/Desktop and point the XDG desktop folder at it.",
           "version": 1,
@@ -629,7 +629,7 @@
         },
         {
           "id": "duff/dictation-keeps-recording-after-releasing-push-to-talk",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/dictation-keeps-recording-after-releasing-push-to-talk/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/dictation-keeps-recording-after-releasing-push-to-talk/RECIPE.md",
           "title": "Dictation keeps recording after I let go of the push-to-talk key",
           "summary": "Rebind both ends of push-to-talk to ignore modifiers.",
           "version": 1,
@@ -658,7 +658,7 @@
         },
         {
           "id": "duff/dictation-typed-into-the-wrong-field",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/dictation-typed-into-the-wrong-field/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/dictation-typed-into-the-wrong-field/RECIPE.md",
           "title": "Dictation went into the wrong field and I have to say it again",
           "summary": "Add Super+D to retype the last dictation into the focused field.",
           "version": 1,
@@ -690,7 +690,7 @@
         },
         {
           "id": "duff/ergodox-ez-cannot-be-flashed-from-oryx",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/ergodox-ez-cannot-be-flashed-from-oryx/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/ergodox-ez-cannot-be-flashed-from-oryx/RECIPE.md",
           "title": "ErgoDox EZ cannot be flashed or trained from Oryx",
           "summary": "Install ZSA's udev rules and add yourself to the plugdev group.",
           "version": 1,
@@ -721,7 +721,7 @@
         },
         {
           "id": "duff/every-bar-shows-the-same-workspace-numbers",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/every-bar-shows-the-same-workspace-numbers/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/every-bar-shows-the-same-workspace-numbers/RECIPE.md",
           "title": "Every display's bar shows the same workspace numbers",
           "summary": "Clone the workspaces widget so each bar lists only its own screen's workspaces.",
           "version": 1,
@@ -752,7 +752,7 @@
         },
         {
           "id": "duff/gaming-mouse-cursor-too-fast",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/gaming-mouse-cursor-too-fast/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/gaming-mouse-cursor-too-fast/RECIPE.md",
           "title": "Gaming mouse moves the cursor too fast to place it precisely",
           "summary": "Give the mouse its own acceleration curve, precise when slow and far on a flick.",
           "version": 1,
@@ -777,7 +777,7 @@
         },
         {
           "id": "duff/git-push-over-https-fails-after-syncing-git-config",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/git-push-over-https-fails-after-syncing-git-config/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/git-push-over-https-fails-after-syncing-git-config/RECIPE.md",
           "title": "git push over HTTPS fails after syncing ~/.config/git/config",
           "summary": "Commit a credential helper that calls gh by name, and keep the sync script from dropping it.",
           "version": 1,
@@ -807,7 +807,7 @@
         },
         {
           "id": "duff/hard-to-see-which-window-is-focused",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/hard-to-see-which-window-is-focused/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/hard-to-see-which-window-is-focused/RECIPE.md",
           "title": "Hard to see which window is focused",
           "summary": "Widen the window borders.",
           "version": 1,
@@ -832,7 +832,7 @@
         },
         {
           "id": "duff/herdr-agent-list-keeps-reordering",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-agent-list-keeps-reordering/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-agent-list-keeps-reordering/RECIPE.md",
           "title": "Herdr's agent list keeps reordering itself",
           "summary": "Group Herdr's agent panel by workspace so its order stays put.",
           "version": 1,
@@ -862,7 +862,7 @@
         },
         {
           "id": "duff/herdr-closes-workspace-pane-or-tab-without-asking",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-closes-workspace-pane-or-tab-without-asking/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-closes-workspace-pane-or-tab-without-asking/RECIPE.md",
           "title": "Herdr closes a workspace, pane, or tab without asking",
           "summary": "Turn Herdr's close confirmation back on and unbind the pane and tab close keys.",
           "version": 1,
@@ -892,7 +892,7 @@
         },
         {
           "id": "duff/herdr-no-shortcut-to-jump-between-agents",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-no-shortcut-to-jump-between-agents/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-no-shortcut-to-jump-between-agents/RECIPE.md",
           "title": "Herdr has no shortcut to jump between agents",
           "summary": "Put the previous and next agent on Alt+Up and Alt+Down, and workspaces on Alt+Shift.",
           "version": 1,
@@ -922,7 +922,7 @@
         },
         {
           "id": "duff/herdr-tab-names-do-not-show-which-tab-runs-an-agent",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-tab-names-do-not-show-which-tab-runs-an-agent/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-tab-names-do-not-show-which-tab-runs-an-agent/RECIPE.md",
           "title": "Herdr tab names don't show which tab is running an agent",
           "summary": "Rename the tab while the agent runs.",
           "version": 1,
@@ -957,7 +957,7 @@
         },
         {
           "id": "duff/hidpi-screens-left-on-auto-scale",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/hidpi-screens-left-on-auto-scale/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/hidpi-screens-left-on-auto-scale/RECIPE.md",
           "title": "HiDPI screens are left on auto scale instead of a fixed 2x",
           "summary": "Pin every screen's scale to 2 instead of auto.",
           "version": 1,
@@ -982,7 +982,7 @@
         },
         {
           "id": "duff/hovering-mouse-steals-keyboard-focus",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/hovering-mouse-steals-keyboard-focus/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/hovering-mouse-steals-keyboard-focus/RECIPE.md",
           "title": "Moving the mouse or brushing the touchpad steals keyboard focus",
           "summary": "Make keyboard focus follow clicks, while hover still scrolls.",
           "version": 1,
@@ -1007,7 +1007,7 @@
         },
         {
           "id": "duff/laptop-screen-stays-black-after-undocked-sleep",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/laptop-screen-stays-black-after-undocked-sleep/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/laptop-screen-stays-black-after-undocked-sleep/RECIPE.md",
           "title": "Laptop screen stays black after undocking with the lid shut and sleeping",
           "summary": "Keep the panel off while the lid is shut, and turn it back on after the wake.",
           "version": 1,
@@ -1039,7 +1039,7 @@
         },
         {
           "id": "duff/laptop-server-sleeps-when-lid-is-shut",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/laptop-server-sleeps-when-lid-is-shut/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/laptop-server-sleeps-when-lid-is-shut/RECIPE.md",
           "title": "Laptop used as a headless server sleeps when the lid is shut",
           "summary": "Ignore the lid and allow only key logins over SSH.",
           "version": 1,
@@ -1071,7 +1071,7 @@
         },
         {
           "id": "duff/laptop-wifi-falls-back-to-2-4-ghz-with-lid-shut",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/laptop-wifi-falls-back-to-2-4-ghz-with-lid-shut/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/laptop-wifi-falls-back-to-2-4-ghz-with-lid-shut/RECIPE.md",
           "title": "Laptop Wi-Fi falls back to slow 2.4 GHz with the lid shut, or never joins 6 GHz",
           "summary": "Switch the saved Wi-Fi profile to WPA3 and pin it to the 5 GHz band.",
           "version": 1,
@@ -1100,7 +1100,7 @@
         },
         {
           "id": "duff/launcher-shortcut-opens-a-second-window",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/launcher-shortcut-opens-a-second-window/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/launcher-shortcut-opens-a-second-window/RECIPE.md",
           "title": "A launcher shortcut opens a second window instead of focusing the open one",
           "summary": "Rebind shortcuts and launcher entries to focus the open window by its class.",
           "version": 1,
@@ -1125,7 +1125,7 @@
         },
         {
           "id": "duff/macbook-t2-trackpad-moves-cursor-while-typing",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/macbook-t2-trackpad-moves-cursor-while-typing/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/macbook-t2-trackpad-moves-cursor-while-typing/RECIPE.md",
           "title": "MacBook T2 trackpad moves the cursor while typing",
           "summary": "Tag the trackpad as internal, and with keyd, pause it after each key with a small daemon.",
           "version": 1,
@@ -1162,7 +1162,7 @@
         },
         {
           "id": "duff/mailto-links-open-in-chrome-instead-of-hey",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/mailto-links-open-in-chrome-instead-of-hey/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/mailto-links-open-in-chrome-instead-of-hey/RECIPE.md",
           "title": "mailto: links open in Chrome instead of HEY",
           "summary": "Put HEY back as the mailto handler and keep it there after updates.",
           "version": 1,
@@ -1189,7 +1189,7 @@
         },
         {
           "id": "duff/mise-upgrade-skips-a-release-that-just-shipped",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/mise-upgrade-skips-a-release-that-just-shipped/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/mise-upgrade-skips-a-release-that-just-shipped/RECIPE.md",
           "title": "mise upgrade skips a release that just shipped",
           "summary": "Turn off mise's release cooldown and track the global mise config.",
           "version": 1,
@@ -1226,7 +1226,7 @@
         },
         {
           "id": "duff/monitors-swap-sides-when-cables-change-ports",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/monitors-swap-sides-when-cables-change-ports/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/monitors-swap-sides-when-cables-change-ports/RECIPE.md",
           "title": "Monitors swap left and right when the cables change ports",
           "summary": "Pin each screen by make, model, and serial instead of by port.",
           "version": 1,
@@ -1255,7 +1255,7 @@
         },
         {
           "id": "duff/no-print-screen-key-for-screenshots",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/no-print-screen-key-for-screenshots/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/no-print-screen-key-for-screenshots/RECIPE.md",
           "title": "No Print Screen key for screenshots",
           "summary": "Put Omasnap on Super+Shift+S and in the Capture menu.",
           "version": 1,
@@ -1282,7 +1282,7 @@
         },
         {
           "id": "duff/no-shortcut-to-open-a-typed-or-pasted-url",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/no-shortcut-to-open-a-typed-or-pasted-url/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/no-shortcut-to-open-a-typed-or-pasted-url/RECIPE.md",
           "title": "No shortcut to open a typed or pasted URL (or search the web)",
           "summary": "Super+U opens an address or searches the web.",
           "version": 1,
@@ -1307,7 +1307,7 @@
         },
         {
           "id": "duff/prompt-typed-into-the-wrong-claude-session",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/prompt-typed-into-the-wrong-claude-session/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/prompt-typed-into-the-wrong-claude-session/RECIPE.md",
           "title": "A prompt typed into the wrong Claude session changes the wrong project",
           "summary": "Have Claude stop and ask when a prompt is meant for another project.",
           "version": 1,
@@ -1337,7 +1337,7 @@
         },
         {
           "id": "duff/reboot-and-close-all-windows-without-asking",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/reboot-and-close-all-windows-without-asking/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/reboot-and-close-all-windows-without-asking/RECIPE.md",
           "title": "Reboot from the menu, or Ctrl+Alt+Delete, closes everything without asking",
           "summary": "Add confirmations to Reboot in the menu and to Ctrl+Alt+Delete.",
           "version": 1,
@@ -1362,7 +1362,7 @@
         },
         {
           "id": "duff/reminder-disappears-after-5-seconds",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/reminder-disappears-after-5-seconds/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/reminder-disappears-after-5-seconds/RECIPE.md",
           "title": "Reminder notification disappears after 5 seconds",
           "summary": "Make reminder toasts critical, so they stay up until dismissed.",
           "version": 1,
@@ -1389,7 +1389,7 @@
         },
         {
           "id": "duff/right-alt-compose-key-loses-alt-modifier",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/right-alt-compose-key-loses-alt-modifier/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/right-alt-compose-key-loses-alt-modifier/RECIPE.md",
           "title": "Putting Compose on Right Alt breaks Right Alt as a modifier",
           "summary": "Make Right Alt Compose on tap and Alt on hold, with keyd.",
           "version": 1,
@@ -1418,7 +1418,7 @@
         },
         {
           "id": "duff/screensaver-starts-too-soon",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/screensaver-starts-too-soon/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/screensaver-starts-too-soon/RECIPE.md",
           "title": "Screensaver starts too soon while reading",
           "summary": "Set longer idle timers for the screensaver and the lock.",
           "version": 1,
@@ -1443,7 +1443,7 @@
         },
         {
           "id": "duff/scrolling-direction-feels-backwards",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/scrolling-direction-feels-backwards/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/scrolling-direction-feels-backwards/RECIPE.md",
           "title": "Scrolling direction feels backwards on the touchpad and mouse",
           "summary": "Turn on natural scrolling for both the touchpad and the mouse.",
           "version": 1,
@@ -1468,7 +1468,7 @@
         },
         {
           "id": "duff/ssh-key-has-to-be-copied-to-every-machine",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/ssh-key-has-to-be-copied-to-every-machine/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/ssh-key-has-to-be-copied-to-every-machine/RECIPE.md",
           "title": "SSH key has to be created or copied onto every Omarchy machine",
           "summary": "Point SSH at the 1Password SSH agent, so one key serves every machine.",
           "version": 1,
@@ -1497,7 +1497,7 @@
         },
         {
           "id": "duff/super-j-error-on-scrolling-layout",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/super-j-error-on-scrolling-layout/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-j-error-on-scrolling-layout/RECIPE.md",
           "title": "Super+J shows a Lua error on a scrolling-layout workspace",
           "summary": "Only toggle the split on dwindle workspaces.",
           "version": 1,
@@ -1523,7 +1523,7 @@
         },
         {
           "id": "duff/super-shift-arrow-only-swaps-windows",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/super-shift-arrow-only-swaps-windows/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-shift-arrow-only-swaps-windows/RECIPE.md",
           "title": "Super+Shift+arrow only swaps windows, can't move one into another's space",
           "summary": "Bind Super+Ctrl+Shift+arrow to move a window into its neighbor's split.",
           "version": 1,
@@ -1548,7 +1548,7 @@
         },
         {
           "id": "duff/super-slash-made-everything-bigger",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/super-slash-made-everything-bigger/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-slash-made-everything-bigger/RECIPE.md",
           "title": "Super+Slash made everything bigger, and it stays that way after reboot",
           "summary": "Put the saved monitor scale back, and optionally turn off Super+/.",
           "version": 1,
@@ -1573,7 +1573,7 @@
         },
         {
           "id": "duff/swap-alt-and-super-on-laptop-keyboard-only",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/swap-alt-and-super-on-laptop-keyboard-only/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/swap-alt-and-super-on-laptop-keyboard-only/RECIPE.md",
           "title": "Swap Alt and Super on the laptop keyboard but not on an external keyboard",
           "summary": "Swap the keys in a keyd config that matches only the laptop keyboard.",
           "version": 1,
@@ -1606,7 +1606,7 @@
         },
         {
           "id": "duff/tailscale-missing-from-the-bar",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/tailscale-missing-from-the-bar/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/tailscale-missing-from-the-bar/RECIPE.md",
           "title": "Tailscale is missing from the bar, or a widget you don't use is on it",
           "summary": "Enable, disable, or add bar widgets with omarchy plugin.",
           "version": 1,
@@ -1635,7 +1635,7 @@
         },
         {
           "id": "duff/touchpad-palm-tap-clicks-things",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/touchpad-palm-tap-clicks-things/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/touchpad-palm-tap-clicks-things/RECIPE.md",
           "title": "A light palm tap on the touchpad clicks things",
           "summary": "Turn off tap-to-click so only a physical press clicks.",
           "version": 1,
@@ -1664,7 +1664,7 @@
         },
         {
           "id": "duff/two-web-app-windows-for-the-same-site-get-mixed-up",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/two-web-app-windows-for-the-same-site-get-mixed-up/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/two-web-app-windows-for-the-same-site-get-mixed-up/RECIPE.md",
           "title": "Two web app windows for the same site share one login or get mixed up",
           "summary": "Give a second account its own Chrome profile, and mark a local copy with a colored border.",
           "version": 1,
@@ -1689,7 +1689,7 @@
         },
         {
           "id": "duff/voxtype-dictation-types-slowly",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/voxtype-dictation-types-slowly/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/voxtype-dictation-types-slowly/RECIPE.md",
           "title": "Dictated text types out slowly, one character at a time",
           "summary": "Set Voxtype's typing delay to zero.",
           "version": 1,
@@ -1719,7 +1719,7 @@
         },
         {
           "id": "duff/voxtype-mishears-the-same-word",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/voxtype-mishears-the-same-word/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/voxtype-mishears-the-same-word/RECIPE.md",
           "title": "Voxtype keeps mishearing the same word",
           "summary": "Map each misheard spelling to the right word in text.replacements.",
           "version": 1,
@@ -1749,7 +1749,7 @@
         },
         {
           "id": "duff/voxtype-parakeet-model-differs-per-machine",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/voxtype-parakeet-model-differs-per-machine/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/voxtype-parakeet-model-differs-per-machine/RECIPE.md",
           "title": "One Voxtype config on machines that need different Parakeet models",
           "summary": "Switch Voxtype to Parakeet and keep the model choice per machine.",
           "version": 1,
@@ -1783,7 +1783,7 @@
         },
         {
           "id": "duff/web-app-opens-links-in-new-windows-or-browser-tabs",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/web-app-opens-links-in-new-windows-or-browser-tabs/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/web-app-opens-links-in-new-windows-or-browser-tabs/RECIPE.md",
           "title": "A web app opens every link in a new window, or sends links out to a browser tab",
           "summary": "Open the site in a regular browser window, or install it as a real Chrome app.",
           "version": 1,
@@ -1814,7 +1814,7 @@
         },
         {
           "id": "duff/wine-app-blurry-or-thin-lines-on-hidpi",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/wine-app-blurry-or-thin-lines-on-hidpi/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/wine-app-blurry-or-thin-lines-on-hidpi/RECIPE.md",
           "title": "Windows app in Wine is tiny, blurry, or draws hair-thin lines on a HiDPI screen",
           "summary": "Draw at 96 DPI in Wine and let Hyprland double it with sharp pixels.",
           "version": 1,
@@ -1850,7 +1850,7 @@
         },
         {
           "id": "duff/wine-app-quits-on-super-w-or-pops-back-up-when-hidden",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/wine-app-quits-on-super-w-or-pops-back-up-when-hidden/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/wine-app-quits-on-super-w-or-pops-back-up-when-hidden/RECIPE.md",
           "title": "Wine app quits on Super+W, or pops back up after you hide it",
           "summary": "Show and hide an all-day Wine app with one key, and make Super+W hide it instead of closing it.",
           "version": 1,
@@ -1880,7 +1880,7 @@
         },
         {
           "id": "duff/workspaces-open-on-the-wrong-monitor",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/workspaces-open-on-the-wrong-monitor/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/workspaces-open-on-the-wrong-monitor/RECIPE.md",
           "title": "Workspaces open on unpredictable monitors",
           "summary": "Give each monitor its own block of workspace numbers.",
           "version": 1,
@@ -1909,7 +1909,7 @@
         },
         {
           "id": "duff/wrong-default-microphone-records-silence",
-          "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/wrong-default-microphone-records-silence/RECIPE.md",
+          "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/wrong-default-microphone-records-silence/RECIPE.md",
           "title": "Wrong default microphone: dictation and calls record silence when docked",
           "summary": "Raise the WirePlumber priority of the microphones you want as the default.",
           "version": 1,
@@ -1944,7 +1944,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/agent-commit-messages-ignore-git-conventions/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/agent-commit-messages-ignore-git-conventions/RECIPE.md"
     },
     "duff/agent-edits-a-different-project-than-its-session": {
       "title": "Coding agent edits another project when a prompt goes to the wrong session",
@@ -1954,7 +1954,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/agent-edits-a-different-project-than-its-session/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/agent-edits-a-different-project-than-its-session/RECIPE.md"
     },
     "duff/agent-skips-the-omarchy-skill-in-a-config-repo": {
       "title": "Coding agent skips the Omarchy skill when working in a dotfiles repo",
@@ -1964,7 +1964,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/agent-skips-the-omarchy-skill-in-a-config-repo/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/agent-skips-the-omarchy-skill-in-a-config-repo/RECIPE.md"
     },
     "duff/bar-and-menu-text-too-small": {
       "title": "Bar and menu text too small, but the terminal font is fine",
@@ -1974,7 +1974,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/bar-and-menu-text-too-small/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/bar-and-menu-text-too-small/RECIPE.md"
     },
     "duff/bar-clock-shows-24-hour-time": {
       "title": "Bar clock shows 24-hour time",
@@ -1984,7 +1984,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/bar-clock-shows-24-hour-time/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/bar-clock-shows-24-hour-time/RECIPE.md"
     },
     "duff/battery-percentage-not-shown-in-the-bar": {
       "title": "Battery percentage not shown in the bar",
@@ -1994,7 +1994,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/battery-percentage-not-shown-in-the-bar/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/battery-percentage-not-shown-in-the-bar/RECIPE.md"
     },
     "duff/caps-lock-as-escape-and-hjkl-arrows": {
       "title": "Make Caps Lock Escape on tap and hjkl arrows on hold",
@@ -2004,7 +2004,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/caps-lock-as-escape-and-hjkl-arrows/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/caps-lock-as-escape-and-hjkl-arrows/RECIPE.md"
     },
     "duff/chrome-privacy-warning-on-local-caddy-https-site": {
       "title": "Chrome shows a privacy warning on a local Caddy HTTPS site",
@@ -2014,7 +2014,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/chrome-privacy-warning-on-local-caddy-https-site/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/chrome-privacy-warning-on-local-caddy-https-site/RECIPE.md"
     },
     "duff/claude-adds-co-authored-by-to-commits": {
       "title": "Claude Code adds \"Co-Authored-By: Claude\" to my commits",
@@ -2024,7 +2024,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-adds-co-authored-by-to-commits/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-adds-co-authored-by-to-commits/RECIPE.md"
     },
     "duff/claude-asks-whether-to-push-after-committing": {
       "title": "Claude Code commits but doesn't push, or asks whether to push",
@@ -2034,7 +2034,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-asks-whether-to-push-after-committing/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-asks-whether-to-push-after-committing/RECIPE.md"
     },
     "duff/claude-changes-never-reach-the-mac": {
       "title": "Claude Code changes made on Omarchy never reach my Mac",
@@ -2044,7 +2044,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-changes-never-reach-the-mac/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-changes-never-reach-the-mac/RECIPE.md"
     },
     "duff/claude-code-config-does-not-follow-to-other-machines": {
       "title": "Claude Code settings and rules don't follow me to my other machines",
@@ -2054,7 +2054,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-code-config-does-not-follow-to-other-machines/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-code-config-does-not-follow-to-other-machines/RECIPE.md"
     },
     "duff/claude-feedback-survey-interrupts-sessions": {
       "title": "Claude Code keeps asking \"How is Claude doing?\"",
@@ -2064,7 +2064,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-feedback-survey-interrupts-sessions/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-feedback-survey-interrupts-sessions/RECIPE.md"
     },
     "duff/claude-sessions-look-alike-in-remote-control": {
       "title": "Claude sessions can't be reached from my phone, or all look alike there",
@@ -2074,7 +2074,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-sessions-look-alike-in-remote-control/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-sessions-look-alike-in-remote-control/RECIPE.md"
     },
     "duff/claude-status-line-does-not-show-project-or-git-state": {
       "title": "Claude Code's status line doesn't show the project or whether git is clean",
@@ -2084,7 +2084,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/claude-status-line-does-not-show-project-or-git-state/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/claude-status-line-does-not-show-project-or-git-state/RECIPE.md"
     },
     "duff/compose-sequence-types-the-wrong-emoji": {
       "title": "A Compose sequence types the wrong emoji, or the one I want is missing",
@@ -2094,7 +2094,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/compose-sequence-types-the-wrong-emoji/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/compose-sequence-types-the-wrong-emoji/RECIPE.md"
     },
     "duff/compose-snippet-with-line-break-scrambled-in-chrome": {
       "title": "A Compose snippet with a line break comes out scrambled in Chrome",
@@ -2104,7 +2104,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/compose-snippet-with-line-break-scrambled-in-chrome/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/compose-snippet-with-line-break-scrambled-in-chrome/RECIPE.md"
     },
     "duff/crash-notification-agent-changes-files-without-asking": {
       "title": "Clicking \"Process crashed\" starts an agent that may change files without asking",
@@ -2114,7 +2114,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/crash-notification-agent-changes-files-without-asking/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/crash-notification-agent-changes-files-without-asking/RECIPE.md"
     },
     "duff/ctrl-enter-toggles-fullscreen-in-ghostty": {
       "title": "Ctrl+Enter toggles fullscreen in Ghostty instead of reaching the app",
@@ -2124,7 +2124,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/ctrl-enter-toggles-fullscreen-in-ghostty/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/ctrl-enter-toggles-fullscreen-in-ghostty/RECIPE.md"
     },
     "duff/customizations-do-not-follow-to-other-machines": {
       "title": "My Omarchy customizations don't follow me to my other machines",
@@ -2134,7 +2134,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/customizations-do-not-follow-to-other-machines/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/customizations-do-not-follow-to-other-machines/RECIPE.md"
     },
     "duff/desktop-shortcuts-appear-in-home-folder": {
       "title": "Desktop shortcuts appear in the home folder",
@@ -2144,7 +2144,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/desktop-shortcuts-appear-in-home-folder/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/desktop-shortcuts-appear-in-home-folder/RECIPE.md"
     },
     "duff/dictation-keeps-recording-after-releasing-push-to-talk": {
       "title": "Dictation keeps recording after I let go of the push-to-talk key",
@@ -2154,7 +2154,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/dictation-keeps-recording-after-releasing-push-to-talk/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/dictation-keeps-recording-after-releasing-push-to-talk/RECIPE.md"
     },
     "duff/dictation-typed-into-the-wrong-field": {
       "title": "Dictation went into the wrong field and I have to say it again",
@@ -2164,7 +2164,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/dictation-typed-into-the-wrong-field/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/dictation-typed-into-the-wrong-field/RECIPE.md"
     },
     "duff/ergodox-ez-cannot-be-flashed-from-oryx": {
       "title": "ErgoDox EZ cannot be flashed or trained from Oryx",
@@ -2174,7 +2174,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/ergodox-ez-cannot-be-flashed-from-oryx/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/ergodox-ez-cannot-be-flashed-from-oryx/RECIPE.md"
     },
     "duff/every-bar-shows-the-same-workspace-numbers": {
       "title": "Every display's bar shows the same workspace numbers",
@@ -2184,7 +2184,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/every-bar-shows-the-same-workspace-numbers/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/every-bar-shows-the-same-workspace-numbers/RECIPE.md"
     },
     "duff/gaming-mouse-cursor-too-fast": {
       "title": "Gaming mouse moves the cursor too fast to place it precisely",
@@ -2194,7 +2194,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/gaming-mouse-cursor-too-fast/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/gaming-mouse-cursor-too-fast/RECIPE.md"
     },
     "duff/git-push-over-https-fails-after-syncing-git-config": {
       "title": "git push over HTTPS fails after syncing ~/.config/git/config",
@@ -2204,7 +2204,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/git-push-over-https-fails-after-syncing-git-config/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/git-push-over-https-fails-after-syncing-git-config/RECIPE.md"
     },
     "duff/hard-to-see-which-window-is-focused": {
       "title": "Hard to see which window is focused",
@@ -2214,7 +2214,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/hard-to-see-which-window-is-focused/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/hard-to-see-which-window-is-focused/RECIPE.md"
     },
     "duff/herdr-agent-list-keeps-reordering": {
       "title": "Herdr's agent list keeps reordering itself",
@@ -2224,7 +2224,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-agent-list-keeps-reordering/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-agent-list-keeps-reordering/RECIPE.md"
     },
     "duff/herdr-closes-workspace-pane-or-tab-without-asking": {
       "title": "Herdr closes a workspace, pane, or tab without asking",
@@ -2234,7 +2234,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-closes-workspace-pane-or-tab-without-asking/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-closes-workspace-pane-or-tab-without-asking/RECIPE.md"
     },
     "duff/herdr-no-shortcut-to-jump-between-agents": {
       "title": "Herdr has no shortcut to jump between agents",
@@ -2244,7 +2244,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-no-shortcut-to-jump-between-agents/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-no-shortcut-to-jump-between-agents/RECIPE.md"
     },
     "duff/herdr-tab-names-do-not-show-which-tab-runs-an-agent": {
       "title": "Herdr tab names don't show which tab is running an agent",
@@ -2254,7 +2254,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/herdr-tab-names-do-not-show-which-tab-runs-an-agent/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/herdr-tab-names-do-not-show-which-tab-runs-an-agent/RECIPE.md"
     },
     "duff/hidpi-screens-left-on-auto-scale": {
       "title": "HiDPI screens are left on auto scale instead of a fixed 2x",
@@ -2264,7 +2264,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/hidpi-screens-left-on-auto-scale/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/hidpi-screens-left-on-auto-scale/RECIPE.md"
     },
     "duff/hovering-mouse-steals-keyboard-focus": {
       "title": "Moving the mouse or brushing the touchpad steals keyboard focus",
@@ -2274,7 +2274,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/hovering-mouse-steals-keyboard-focus/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/hovering-mouse-steals-keyboard-focus/RECIPE.md"
     },
     "duff/laptop-screen-stays-black-after-undocked-sleep": {
       "title": "Laptop screen stays black after undocking with the lid shut and sleeping",
@@ -2284,7 +2284,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/laptop-screen-stays-black-after-undocked-sleep/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/laptop-screen-stays-black-after-undocked-sleep/RECIPE.md"
     },
     "duff/laptop-server-sleeps-when-lid-is-shut": {
       "title": "Laptop used as a headless server sleeps when the lid is shut",
@@ -2294,7 +2294,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/laptop-server-sleeps-when-lid-is-shut/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/laptop-server-sleeps-when-lid-is-shut/RECIPE.md"
     },
     "duff/laptop-wifi-falls-back-to-2-4-ghz-with-lid-shut": {
       "title": "Laptop Wi-Fi falls back to slow 2.4 GHz with the lid shut, or never joins 6 GHz",
@@ -2304,7 +2304,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/laptop-wifi-falls-back-to-2-4-ghz-with-lid-shut/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/laptop-wifi-falls-back-to-2-4-ghz-with-lid-shut/RECIPE.md"
     },
     "duff/launcher-shortcut-opens-a-second-window": {
       "title": "A launcher shortcut opens a second window instead of focusing the open one",
@@ -2314,7 +2314,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/launcher-shortcut-opens-a-second-window/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/launcher-shortcut-opens-a-second-window/RECIPE.md"
     },
     "duff/macbook-t2-trackpad-moves-cursor-while-typing": {
       "title": "MacBook T2 trackpad moves the cursor while typing",
@@ -2324,7 +2324,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/macbook-t2-trackpad-moves-cursor-while-typing/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/macbook-t2-trackpad-moves-cursor-while-typing/RECIPE.md"
     },
     "duff/mailto-links-open-in-chrome-instead-of-hey": {
       "title": "mailto: links open in Chrome instead of HEY",
@@ -2334,7 +2334,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/mailto-links-open-in-chrome-instead-of-hey/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/mailto-links-open-in-chrome-instead-of-hey/RECIPE.md"
     },
     "duff/mise-upgrade-skips-a-release-that-just-shipped": {
       "title": "mise upgrade skips a release that just shipped",
@@ -2344,7 +2344,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/mise-upgrade-skips-a-release-that-just-shipped/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/mise-upgrade-skips-a-release-that-just-shipped/RECIPE.md"
     },
     "duff/monitors-swap-sides-when-cables-change-ports": {
       "title": "Monitors swap left and right when the cables change ports",
@@ -2354,7 +2354,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/monitors-swap-sides-when-cables-change-ports/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/monitors-swap-sides-when-cables-change-ports/RECIPE.md"
     },
     "duff/no-print-screen-key-for-screenshots": {
       "title": "No Print Screen key for screenshots",
@@ -2364,7 +2364,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/no-print-screen-key-for-screenshots/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/no-print-screen-key-for-screenshots/RECIPE.md"
     },
     "duff/no-shortcut-to-open-a-typed-or-pasted-url": {
       "title": "No shortcut to open a typed or pasted URL (or search the web)",
@@ -2374,7 +2374,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/no-shortcut-to-open-a-typed-or-pasted-url/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/no-shortcut-to-open-a-typed-or-pasted-url/RECIPE.md"
     },
     "duff/prompt-typed-into-the-wrong-claude-session": {
       "title": "A prompt typed into the wrong Claude session changes the wrong project",
@@ -2384,7 +2384,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/prompt-typed-into-the-wrong-claude-session/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/prompt-typed-into-the-wrong-claude-session/RECIPE.md"
     },
     "duff/reboot-and-close-all-windows-without-asking": {
       "title": "Reboot from the menu, or Ctrl+Alt+Delete, closes everything without asking",
@@ -2394,7 +2394,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/reboot-and-close-all-windows-without-asking/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/reboot-and-close-all-windows-without-asking/RECIPE.md"
     },
     "duff/reminder-disappears-after-5-seconds": {
       "title": "Reminder notification disappears after 5 seconds",
@@ -2404,7 +2404,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/reminder-disappears-after-5-seconds/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/reminder-disappears-after-5-seconds/RECIPE.md"
     },
     "duff/right-alt-compose-key-loses-alt-modifier": {
       "title": "Putting Compose on Right Alt breaks Right Alt as a modifier",
@@ -2414,7 +2414,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/right-alt-compose-key-loses-alt-modifier/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/right-alt-compose-key-loses-alt-modifier/RECIPE.md"
     },
     "duff/screensaver-starts-too-soon": {
       "title": "Screensaver starts too soon while reading",
@@ -2424,7 +2424,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/screensaver-starts-too-soon/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/screensaver-starts-too-soon/RECIPE.md"
     },
     "duff/scrolling-direction-feels-backwards": {
       "title": "Scrolling direction feels backwards on the touchpad and mouse",
@@ -2434,7 +2434,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/scrolling-direction-feels-backwards/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/scrolling-direction-feels-backwards/RECIPE.md"
     },
     "duff/ssh-key-has-to-be-copied-to-every-machine": {
       "title": "SSH key has to be created or copied onto every Omarchy machine",
@@ -2444,7 +2444,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/ssh-key-has-to-be-copied-to-every-machine/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/ssh-key-has-to-be-copied-to-every-machine/RECIPE.md"
     },
     "duff/super-j-error-on-scrolling-layout": {
       "title": "Super+J shows a Lua error on a scrolling-layout workspace",
@@ -2454,7 +2454,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/super-j-error-on-scrolling-layout/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-j-error-on-scrolling-layout/RECIPE.md"
     },
     "duff/super-shift-arrow-only-swaps-windows": {
       "title": "Super+Shift+arrow only swaps windows, can't move one into another's space",
@@ -2464,7 +2464,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/super-shift-arrow-only-swaps-windows/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-shift-arrow-only-swaps-windows/RECIPE.md"
     },
     "duff/super-slash-made-everything-bigger": {
       "title": "Super+Slash made everything bigger, and it stays that way after reboot",
@@ -2474,7 +2474,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/super-slash-made-everything-bigger/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-slash-made-everything-bigger/RECIPE.md"
     },
     "duff/swap-alt-and-super-on-laptop-keyboard-only": {
       "title": "Swap Alt and Super on the laptop keyboard but not on an external keyboard",
@@ -2484,7 +2484,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/swap-alt-and-super-on-laptop-keyboard-only/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/swap-alt-and-super-on-laptop-keyboard-only/RECIPE.md"
     },
     "duff/tailscale-missing-from-the-bar": {
       "title": "Tailscale is missing from the bar, or a widget you don't use is on it",
@@ -2494,7 +2494,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/tailscale-missing-from-the-bar/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/tailscale-missing-from-the-bar/RECIPE.md"
     },
     "duff/touchpad-palm-tap-clicks-things": {
       "title": "A light palm tap on the touchpad clicks things",
@@ -2504,7 +2504,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/touchpad-palm-tap-clicks-things/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/touchpad-palm-tap-clicks-things/RECIPE.md"
     },
     "duff/two-web-app-windows-for-the-same-site-get-mixed-up": {
       "title": "Two web app windows for the same site share one login or get mixed up",
@@ -2514,7 +2514,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/two-web-app-windows-for-the-same-site-get-mixed-up/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/two-web-app-windows-for-the-same-site-get-mixed-up/RECIPE.md"
     },
     "duff/voxtype-dictation-types-slowly": {
       "title": "Dictated text types out slowly, one character at a time",
@@ -2524,7 +2524,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/voxtype-dictation-types-slowly/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/voxtype-dictation-types-slowly/RECIPE.md"
     },
     "duff/voxtype-mishears-the-same-word": {
       "title": "Voxtype keeps mishearing the same word",
@@ -2534,7 +2534,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/voxtype-mishears-the-same-word/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/voxtype-mishears-the-same-word/RECIPE.md"
     },
     "duff/voxtype-parakeet-model-differs-per-machine": {
       "title": "One Voxtype config on machines that need different Parakeet models",
@@ -2544,7 +2544,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/voxtype-parakeet-model-differs-per-machine/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/voxtype-parakeet-model-differs-per-machine/RECIPE.md"
     },
     "duff/web-app-opens-links-in-new-windows-or-browser-tabs": {
       "title": "A web app opens every link in a new window, or sends links out to a browser tab",
@@ -2554,7 +2554,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/web-app-opens-links-in-new-windows-or-browser-tabs/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/web-app-opens-links-in-new-windows-or-browser-tabs/RECIPE.md"
     },
     "duff/wine-app-blurry-or-thin-lines-on-hidpi": {
       "title": "Windows app in Wine is tiny, blurry, or draws hair-thin lines on a HiDPI screen",
@@ -2564,7 +2564,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/wine-app-blurry-or-thin-lines-on-hidpi/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/wine-app-blurry-or-thin-lines-on-hidpi/RECIPE.md"
     },
     "duff/wine-app-quits-on-super-w-or-pops-back-up-when-hidden": {
       "title": "Wine app quits on Super+W, or pops back up after you hide it",
@@ -2574,7 +2574,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/wine-app-quits-on-super-w-or-pops-back-up-when-hidden/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/wine-app-quits-on-super-w-or-pops-back-up-when-hidden/RECIPE.md"
     },
     "duff/workspaces-open-on-the-wrong-monitor": {
       "title": "Workspaces open on unpredictable monitors",
@@ -2584,7 +2584,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/workspaces-open-on-the-wrong-monitor/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/workspaces-open-on-the-wrong-monitor/RECIPE.md"
     },
     "duff/wrong-default-microphone-records-silence": {
       "title": "Wrong default microphone: dictation and calls record silence when docked",
@@ -2594,7 +2594,7 @@
         "duff/omarchy-cookbook"
       ],
       "adapted_into": [],
-      "url": "https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/wrong-default-microphone-records-silence/RECIPE.md"
+      "url": "https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/wrong-default-microphone-records-silence/RECIPE.md"
     }
   }
 }

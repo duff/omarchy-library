@@ -20,5 +20,5 @@ Recipes their authors marked as a better default or a bug workaround, most appli
 
 | Recipe | Kind | Cookbooks |
 |---|---|---|
-| [Super+J shows a Lua error on a scrolling-layout workspace](https://github.com/duff/omarchy-cookbook/blob/e3f1bcf/recipes/super-j-error-on-scrolling-layout/RECIPE.md) | bug workaround | 1 |
+| [Super+J shows a Lua error on a scrolling-layout workspace](https://github.com/duff/omarchy-cookbook/blob/7dc242d/recipes/super-j-error-on-scrolling-layout/RECIPE.md) | bug workaround | 1 |
 
