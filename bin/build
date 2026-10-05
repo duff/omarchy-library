@@ -1,0 +1,113 @@
+#!/bin/bash
+
+# Rebuilds index.json and INDEX.md.
+#
+#   bin/build --kitchen DIR                search GitHub and check every cookbook
+#   bin/build --kitchen DIR --local DIR    read cookbooks from DIR/<owner>__<repo>
+#                                          instead, with no network (for a preview)
+#   --out DIR                              write the index there instead of here
+#   --blocklist FILE                       use another blocklist (for tests)
+#
+# The --kitchen DIR is a checkout of omarchy-kitchen, whose rules decide what
+# passes. KITCHEN_DIR works too.
+
+set -o pipefail
+
+root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+kitchen=${KITCHEN_DIR:-$root/../omarchy-kitchen}
+local_dir=""
+out=$root
+blocklist=$root/blocklist.json
+while (($#)); do
+  case $1 in
+    --kitchen) kitchen=$2; shift 2 ;;
+    --local) local_dir=$2; shift 2 ;;
+    --out) out=$2; shift 2 ;;
+    --blocklist) blocklist=$2; shift 2 ;;
+    *) echo "build: unknown argument $1" >&2; exit 2 ;;
+  esac
+done
+[[ -x $kitchen/bin/kitchen ]] || { echo "build: no omarchy-kitchen checkout at $kitchen" >&2; exit 1; }
+source "$kitchen/lib/kitchen.sh"
+
+REPO_NAME='^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$'
+checked_with=$(git -C "$kitchen" describe --tags --always 2>/dev/null || echo unknown)
+blocked=$(jq -r '.[].repo' "$blocklist")
+previous='{}'
+[[ -f $out/index.json ]] && previous=$(cat "$out/index.json")
+
+# One cookbook's index entry, from a checkout of it.
+cookbook_entry() {
+  local repo=$1 dir=$2 pushed_at=$3 stars=$4 commit=$5 problems=0 recipes='[]' settings file folder
+  if ! output=$("$kitchen/bin/kitchen" check "$dir" 2>&1); then
+    problems=$(grep -c . <<<"$output")
+  fi
+  if ((problems == 0)); then
+    recipes=$(for file in "$dir"/recipes/*/RECIPE.md; do
+      [[ -f $file ]] || continue
+      folder=$(basename "$(dirname "$file")")
+      kitchen_header "$file" | jq -c --arg folder "$folder" '{header: ., folder: $folder}'
+    done | jq -s .)
+  fi
+  settings=$(jq -c 'if type == "object" then . else {} end' "$dir/cookbook.json" 2>/dev/null || echo '{}')
+  jq -n -L "$root/lib" \
+    --arg repo "$repo" --arg commit "$commit" --arg pushed_at "$pushed_at" --argjson stars "${stars:-0}" \
+    --argjson problems "$problems" --argjson settings "$settings" --argjson recipes "$recipes" '
+    include "library";
+    {
+      repo: $repo,
+      url: "https://github.com/\($repo)",
+      owner: ($repo | split("/")[0]),
+      description: ($settings.description | clean),
+      machines: ([($settings.machines // [])[] | clean | select(. != "")] | .[0:5]),
+      kitchen: ($settings.kitchen | clean(20)),
+      commit: $commit,
+      pushed_at: (if $pushed_at == "" then null else $pushed_at end),
+      stars: $stars,
+      passes_check: ($problems == 0),
+      problems: $problems,
+      recipes: [$recipes[] | recipe_entry($repo; $commit)]
+    }'
+}
+
+entries() {
+  local name repo dir pushed_at stars old tmp
+  if [[ -n $local_dir ]]; then
+    for dir in "$local_dir"/*/; do
+      name=$(basename "$dir")
+      repo=${name/__//}
+      [[ $repo =~ $REPO_NAME ]] || continue
+      grep -qxF -- "$repo" <<<"$blocked" && continue
+      cookbook_entry "$repo" "$dir" "" 0 local
+    done
+    return
+  fi
+
+  tmp=$(mktemp -d)
+  trap 'rm -rf "$tmp"' RETURN
+  gh api -X GET search/repositories --paginate \
+    -f q="topic:omarchy-cookbook fork:false archived:false" -f per_page=100 \
+    --jq '.items[] | [.full_name, .pushed_at, .stargazers_count] | @tsv' |
+    while IFS=$'\t' read -r repo pushed_at stars; do
+      [[ $repo =~ $REPO_NAME ]] || continue
+      grep -qxF -- "$repo" <<<"$blocked" && continue
+      # A cookbook that hasn't changed since the last build, checked with the
+      # same omarchy-kitchen, keeps its entry.
+      old=$(jq -c --arg r "$repo" --arg p "$pushed_at" --arg k "$checked_with" '
+        select(.checked_with == $k) | .cookbooks[]? | select(.repo == $r and .pushed_at == $p)' <<<"$previous")
+      if [[ -n $old ]]; then
+        echo "$old"
+        continue
+      fi
+      dir="$tmp/${repo/\//__}"
+      git clone --depth 1 --quiet "https://github.com/$repo.git" "$dir" 2>/dev/null || continue
+      cookbook_entry "$repo" "$dir" "$pushed_at" "$stars" "$(git -C "$dir" rev-parse --short HEAD)"
+    done
+}
+
+index=$(entries | jq -s -L "$root/lib" --arg built "$(date +%F)" --arg checked_with "$checked_with" \
+  'include "library"; index($built; $checked_with)') || exit 1
+mkdir -p "$out"
+echo "$index" >"$out/index.json"
+jq -r -L "$root/lib" 'include "library"; render' <<<"$index" >"$out/INDEX.md"
+jq -r '"\([.cookbooks[] | select(.passes_check)] | length) of \(.cookbooks | length) cookbooks pass; \(.recipes | length) recipes."' <<<"$index"

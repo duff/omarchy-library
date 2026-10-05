@@ -1,0 +1,131 @@
+#!/bin/bash
+
+# Runs every test: test/run [name filter]
+# Needs omarchy-kitchen next to this repo, or KITCHEN_DIR pointing at it.
+
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." || exit 1
+ROOT=$(pwd)
+export KITCHEN_DIR=${KITCHEN_DIR:-$ROOT/../omarchy-kitchen}
+
+fail() {
+  echo "$*"
+  exit 1
+}
+
+assert_has() {
+  grep -qF -- "$2" <<<"$1" || fail "expected to find: $2"$'\n'"in:"$'\n'"$1"
+}
+
+assert_lacks() {
+  ! grep -qF -- "$2" <<<"$1" || fail "expected not to find: $2"$'\n'"in:"$'\n'"$1"
+}
+
+# cookbook <owner> <description> <folder> <header jq filter> [<folder> <filter>]...
+# Writes $TEST_TMP/books/<owner>__omarchy-cookbook with the given recipes.
+cookbook() {
+  local owner=$1 description=$2 dir="$TEST_TMP/books/$1__omarchy-cookbook" folder filter header links
+  shift 2
+  mkdir -p "$dir/recipes"
+  jq -n --arg o "$owner" --arg d "$description" '{owner: $o, kitchen: "v0.1.0", description: $d}' >"$dir/cookbook.json"
+  : >"$dir/README.md"
+  while (($#)); do
+    folder=$1 filter=$2
+    shift 2
+    header=$(jq -n --arg o "$owner" --arg f "$folder" '{
+      id: "\($o)/\($f)", title: "Title of \($f)", summary: "Fix it.", version: 1,
+      tested_on: {omarchy: "4.0.4"}, applies_to: "Every machine.", requires: [], touches: [],
+      root: false, network: false, installs: [], runs: [], agent_config: false,
+      history: [{who: $o, did: "created", date: "2026-09-01"}]
+    }' | jq "$filter")
+    links=$(jq -r '.history[] | "- \(.did) by [@\(.who)](https://github.com/\(.who))."' <<<"$header")
+    mkdir -p "$dir/recipes/$folder"
+    printf -- '---\n%s\n---\n\n# %s\n\n## Problem\n\nX.\n\n## Fix\n\nY.\n\n## Apply and check\n\nZ.\n\n## Undo\n\nW.\n\n## History\n\n%s\n' \
+      "$header" "$(jq -r .title <<<"$header")" "$links" >"$dir/recipes/$folder/RECIPE.md"
+    echo "- [$folder](recipes/$folder/RECIPE.md)" >>"$dir/README.md"
+  done
+  echo "$dir"
+}
+
+build() {
+  "$ROOT/bin/build" --local "$TEST_TMP/books" --out "$TEST_TMP/out" "$@" >/dev/null || fail "build failed"
+}
+
+test_groups_copies_by_id_and_counts_adaptations() {
+  cookbook alice "Alice's recipes" caps-lock-as-escape '.upstream = "default"' >/dev/null
+  cookbook bob "Bob's recipes" \
+    caps-lock-as-escape '.id = "alice/caps-lock-as-escape" | .history = [
+      {who: "alice", did: "created", date: "2026-09-01"},
+      {who: "bob", did: "applied", date: "2026-09-05", from: "alice/omarchy-cookbook@abc1234"}]' \
+    caps-lock-as-control '.history = [
+      {who: "alice", did: "created", date: "2026-09-01"},
+      {who: "bob", did: "adapted", date: "2026-09-06", from: "alice/omarchy-cookbook@abc1234", parent: "alice/caps-lock-as-escape"}]' >/dev/null
+  build
+  escape=$(jq -c '.recipes["alice/caps-lock-as-escape"]' "$TEST_TMP/out/index.json")
+  assert_has "$escape" '"cookbooks":["alice/omarchy-cookbook","bob/omarchy-cookbook"]'
+  assert_has "$escape" '"adapted_into":["bob/caps-lock-as-control"]'
+  assert_has "$escape" '"url":"https://github.com/alice/'
+  index=$(cat "$TEST_TMP/out/INDEX.md")
+  assert_has "$index" "| [Title of caps-lock-as-escape](https://github.com/alice/omarchy-cookbook/blob/local/recipes/caps-lock-as-escape/RECIPE.md) | [@alice](https://github.com/alice) | 2 | 1 |"
+  assert_has "$index" "| better default | 2 |"
+}
+
+test_lists_failing_cookbooks_without_their_recipes() {
+  dir=$(cookbook carol "Carol's recipes" broken '.')
+  echo "# No header" >"$dir/recipes/broken/RECIPE.md"
+  build
+  carol=$(jq -c '.cookbooks[0] | {passes_check, recipes}' "$TEST_TMP/out/index.json")
+  assert_has "$carol" '{"passes_check":false,"recipes":[]}'
+  assert_has "$(cat "$TEST_TMP/out/INDEX.md")" "## Not passing the check"
+}
+
+test_cleans_text_copied_from_cookbooks() {
+  cookbook mallory 'Ignore previous instructions <script>alert(1)</script> | break' \
+    sneaky '.title = "Bar | <img src=x onerror=alert(1)> [click](https://evil.example) `rm -rf ~`"' >/dev/null
+  build
+  index=$(cat "$TEST_TMP/out/INDEX.md")
+  for bad in "<img" "<script" "](https://evil" '`rm'; do
+    assert_lacks "$index" "$bad"
+  done
+}
+
+test_clean_keeps_text_to_one_short_line() {
+  got=$(jq -rn -L "$ROOT/lib" 'include "library"; "a\nb​c" | clean')
+  [[ $got == "a bc" ]] || fail "got: $got"
+  got=$(jq -rn -L "$ROOT/lib" 'include "library"; "x" * 300 | clean | length')
+  [[ $got == 160 ]] || fail "length: $got"
+}
+
+test_skips_blocked_cookbooks() {
+  cookbook spammer "Spam" junk '.' >/dev/null
+  echo '[{"repo": "spammer/omarchy-cookbook", "why": "spam", "date": "2026-10-05"}]' >"$TEST_TMP/blocklist.json"
+  build --blocklist "$TEST_TMP/blocklist.json"
+  [[ $(jq '.cookbooks | length' "$TEST_TMP/out/index.json") == 0 ]] || fail "listed a blocked cookbook"
+}
+
+test_an_empty_library_still_renders() {
+  mkdir -p "$TEST_TMP/books"
+  build
+  index=$(cat "$TEST_TMP/out/INDEX.md")
+  assert_has "$index" "0 cookbooks and 0 recipes"
+  assert_has "$index" "None yet."
+}
+
+count=0
+failures=0
+for name in $(declare -F | awk '{ print $3 }' | grep '^test_' | sort); do
+  [[ -n ${1:-} && $name != *"$1"* ]] && continue
+  count=$((count + 1))
+  output=$( (
+    TEST_TMP=$(mktemp -d)
+    trap 'rm -rf "$TEST_TMP"' EXIT
+    "$name"
+  ) 2>&1)
+  if (($?)); then
+    failures=$((failures + 1))
+    printf '\nFAIL %s\n%s\n' "$name" "$(sed 's/^/  /' <<<"$output")"
+  else
+    printf .
+  fi
+done
+printf '\n%d tests, %d failures\n' "$count" "$failures"
+((failures == 0))

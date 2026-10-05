@@ -1,0 +1,42 @@
+name: Build the index
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: duff/omarchy-kitchen
+          ref: v0.1.0
+          path: kitchen
+          fetch-depth: 0
+      - run: bin/build --kitchen kitchen
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Commit the index if it changed
+        run: |
+          # The build date alone isn't a change, except once a month: GitHub
+          # turns off scheduled workflows in a repo with no commits for 60 days.
+          changed=false
+          for file in index.json INDEX.md; do
+            if ! diff -q <(git show "HEAD:$file" 2>/dev/null | grep -v -e '"built":' -e '^Built on') \
+                         <(grep -v -e '"built":' -e '^Built on' "$file") >/dev/null; then
+              changed=true
+            fi
+          done
+          if $changed || (( $(date +%s) - $(git log -1 --format=%ct) > 30 * 86400 )); then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add index.json INDEX.md
+            git commit -q -m "Update the index"
+            git push -q
+          fi
