@@ -3,6 +3,19 @@
   "checked_with": "v0.5.0",
   "cookbooks": [
     {
+      "repo": "campeterson41/omarchy-cookbook",
+      "url": "https://github.com/campeterson41/omarchy-cookbook",
+      "owner": "campeterson41",
+      "description": "Omarchy customizations from Cam.",
+      "kitchen": "v0.5.0",
+      "commit": "407a7d9",
+      "pushed_at": "2026-10-05T17:19:26Z",
+      "stars": 0,
+      "passes_check": true,
+      "problems": 0,
+      "recipes": []
+    },
+    {
       "repo": "duff/omarchy-cookbook",
       "url": "https://github.com/duff/omarchy-cookbook",
       "owner": "duff",
