@@ -1,12 +1,12 @@
 # Omarchy cookbook library
 
-Built on 2026-10-05 from every public GitHub repo with the topic `omarchy-cookbook`: 2 cookbooks and 68 recipes. See [README.md](README.md) to add yours, or [index.json](index.json) for agents.
+Built on 2026-10-06 from every public GitHub repo with the topic `omarchy-cookbook`: 2 cookbooks and 90 recipes. See [README.md](README.md) to add yours, or [index.json](index.json) for agents.
 
 ## Cookbooks
 
 | Cookbook | About | Recipes | Updated |
 |---|---|---|---|
-| [campeterson41/omarchy-cookbook](https://github.com/campeterson41/omarchy-cookbook) | Omarchy customizations from Cam. | 0 | 2026-10-05 |
+| [campeterson41/omarchy-cookbook](https://github.com/campeterson41/omarchy-cookbook) | Omarchy customizations from Cam. | 22 | 2026-10-05 |
 | [duff/omarchy-cookbook](https://github.com/duff/omarchy-cookbook) | Duff's Omarchy customizations, one problem per recipe. | 68 | 2026-10-05 |
 
 ## Most applied

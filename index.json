@@ -1,5 +1,5 @@
 {
-  "built": "2026-10-05",
+  "built": "2026-10-06",
   "checked_with": "v0.5.0",
   "cookbooks": [
     {
@@ -8,12 +8,690 @@
       "owner": "campeterson41",
       "description": "Omarchy customizations from Cam.",
       "kitchen": "v0.5.0",
-      "commit": "407a7d9",
-      "pushed_at": "2026-10-05T17:19:26Z",
+      "commit": "0041bbe",
+      "pushed_at": "2026-10-05T19:43:34Z",
       "stars": 0,
       "passes_check": true,
       "problems": 0,
-      "recipes": []
+      "recipes": [
+        {
+          "id": "campeterson41/apple-function-row-sends-media-keys",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/apple-function-row-sends-media-keys/RECIPE.md",
+          "title": "Apple function row sends media keys instead of F keys",
+          "summary": "Set hid_apple fnmode=2 so function keys are primary.",
+          "version": 1,
+          "applies_to": "Apple keyboards handled by hid_apple.",
+          "requires": [
+            {
+              "command": "modinfo"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": true,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/apple-keyboard-has-no-screenshot-key",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/apple-keyboard-has-no-screenshot-key/RECIPE.md",
+          "title": "Apple keyboard has no Print Screen key",
+          "summary": "Use Super+Shift+S for the stock screenshot and annotation flow.",
+          "version": 1,
+          "applies_to": "Apple keyboards, or any keyboard without Print Screen..",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/bar-background-is-too-solid",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-background-is-too-solid/RECIPE.md",
+          "title": "Bar background is too solid",
+          "summary": "Enable the shell’s transparent bar preference.",
+          "version": 1,
+          "applies_to": "Omarchy shell bar.",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/bar-clock-is-not-in-12-hour-format",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-clock-is-not-in-12-hour-format/RECIPE.md",
+          "title": "Bar clock is not in 12-hour format",
+          "summary": "Show the weekday and 12-hour time with AM/PM.",
+          "version": 1,
+          "applies_to": "Omarchy shell clock widget..",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/bar-does-not-show-computer-headroom",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-does-not-show-computer-headroom/RECIPE.md",
+          "title": "Bar does not show computer headroom",
+          "summary": "Display shared CPU, memory, swap, disk, and largest-app readings in a shell panel.",
+          "version": 1,
+          "applies_to": "Omarchy Quickshell shell with resource-guard installed.",
+          "requires": [
+            {
+              "command": "resource-guard"
+            },
+            {
+              "command": "python3"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [
+            "cam.resources widget reader while the shell is running"
+          ],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/bar-has-no-button-for-a-custom-workspace",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-has-no-button-for-a-custom-workspace/RECIPE.md",
+          "title": "Bar has no button for a custom workspace launcher",
+          "summary": "Add a small user-owned shell widget that runs a local launcher.",
+          "version": 1,
+          "applies_to": "Omarchy Quickshell user plugins.",
+          "requires": [
+            {
+              "command": "dashboard-workspace"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": true,
+          "installs": [],
+          "runs": [
+            "services started by dashboard-workspace (separate recipe)"
+          ],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/battery-percentage-is-missing-from-the-bar",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/battery-percentage-is-missing-from-the-bar/RECIPE.md",
+          "title": "Battery percentage is missing from the bar",
+          "summary": "Enable showPercentage on the existing power widget.",
+          "version": 1,
+          "applies_to": "Laptops with a battery..",
+          "requires": [
+            {
+              "laptop": true
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/bluetooth-speaker-needs-manual-a2dp-recovery",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bluetooth-speaker-needs-manual-a2dp-recovery/RECIPE.md",
+          "title": "Bluetooth speaker needs manual A2DP recovery",
+          "summary": "Request automatic A2DP playback and capture profile connection.",
+          "version": 1,
+          "applies_to": "PipeWire/WirePlumber Bluetooth audio setups.",
+          "requires": [
+            {
+              "command": "wpctl"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/browser-profile-launcher-opens-the-wrong-account",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/browser-profile-launcher-opens-the-wrong-account/RECIPE.md",
+          "title": "Browser profile launcher opens the wrong account",
+          "summary": "Give a separately restored Chromium profile its own desktop launcher.",
+          "version": 1,
+          "applies_to": "Chromium users with an existing separately restored profile.",
+          "requires": [
+            {
+              "command": "chromium"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": true,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/dashboard-group-opens-on-a-busy-workspace",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dashboard-group-opens-on-a-busy-workspace/RECIPE.md",
+          "title": "Dashboard group opens on a busy workspace",
+          "summary": "Wait for chosen local services, then open one browser window on an empty workspace.",
+          "version": 1,
+          "applies_to": "Hyprland with Chromium and existing local dashboard services.",
+          "requires": [
+            {
+              "command": "chromium"
+            },
+            {
+              "command": "hyprctl"
+            },
+            {
+              "command": "python3"
+            },
+            {
+              "command": "jq"
+            },
+            {
+              "command": "curl"
+            },
+            {
+              "command": "flock"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": true,
+          "installs": [],
+          "runs": [
+            "pre-existing dashboard user services started on demand",
+            "transient browser user unit"
+          ],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/dictated-text-types-slowly",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dictated-text-types-slowly/RECIPE.md",
+          "title": "Dictated text types slowly even with zero configured delay",
+          "summary": "Remove wtype’s two fixed 2 ms sleeps while retaining compositor roundtrips.",
+          "version": 1,
+          "applies_to": "Wayland compositors supporting the virtual-keyboard protocol.",
+          "requires": [
+            {
+              "command": "meson"
+            },
+            {
+              "command": "ninja"
+            },
+            {
+              "command": "git"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": true,
+          "installs": [
+            "private f9-wtype build"
+          ],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/dictation-waits-too-long-after-key-release",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dictation-waits-too-long-after-key-release/RECIPE.md",
+          "title": "Dictation waits too long after key release",
+          "summary": "Keep Moonshine and Vosk resident and bound the finalization wait after F9 release.",
+          "version": 1,
+          "applies_to": "English local dictation on Wayland.",
+          "requires": [
+            {
+              "command": "python3"
+            },
+            {
+              "command": "parec"
+            },
+            {
+              "command": "wl-copy"
+            },
+            {
+              "command": "notify-send"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2",
+            "moonshine-voice": "0.1.5",
+            "vosk": "0.3.45"
+          },
+          "root": false,
+          "network": true,
+          "installs": [
+            "venv/moonshine-voice==0.1.5",
+            "venv/vosk==0.3.45",
+            "venv/numpy==2.5.3",
+            "Moonshine and Vosk local models",
+            "custom f9-wtype (separate recipe)"
+          ],
+          "runs": [
+            "f9-streaming.service"
+          ],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/dock-audio-takes-over-laptop-speakers",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dock-audio-takes-over-laptop-speakers/RECIPE.md",
+          "title": "Dock audio takes over the laptop speakers",
+          "summary": "Give the chosen ALSA output a higher WirePlumber session priority.",
+          "version": 1,
+          "applies_to": "PipeWire/WirePlumber systems with multiple outputs.",
+          "requires": [
+            {
+              "command": "wpctl"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2",
+            "wireplumber": "0.5.17"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/heavy-agent-jobs-make-the-desktop-unresponsive",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/heavy-agent-jobs-make-the-desktop-unresponsive/RECIPE.md",
+          "title": "Heavy agent jobs make the desktop unresponsive",
+          "summary": "Share one telemetry collector and run heavy jobs in a low-priority serialized scope.",
+          "version": 1,
+          "applies_to": "Linux systems with a systemd user manager and /proc telemetry.",
+          "requires": [
+            {
+              "command": "python3"
+            },
+            {
+              "command": "systemd-run"
+            },
+            {
+              "command": "ionice"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": true,
+          "network": false,
+          "installs": [],
+          "runs": [
+            "resource-guard.service"
+          ],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/mixed-dpi-monitors-overlap-or-change-position",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/mixed-dpi-monitors-overlap-or-change-position/RECIPE.md",
+          "title": "Mixed-DPI monitors overlap or change position",
+          "summary": "Set each output’s mode, scale, and position in logical pixels.",
+          "version": 1,
+          "applies_to": "Mixed-DPI setups with at least two monitors.",
+          "requires": [
+            {
+              "monitors": 2
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/nouveau-pointer-disappears-on-laptop-screen",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/nouveau-pointer-disappears-on-laptop-screen/RECIPE.md",
+          "title": "Nouveau pointer disappears on the laptop screen",
+          "summary": "Use software cursors and keep the pointer visible during typing and idle.",
+          "version": 1,
+          "applies_to": "Older GPUs using Nouveau with a disappearing pointer.",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/older-gpu-desktop-animations-stutter",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/older-gpu-desktop-animations-stutter/RECIPE.md",
+          "title": "Older GPU desktop animations stutter",
+          "summary": "Disable animations and enable adaptive render scheduling.",
+          "version": 1,
+          "applies_to": "Older GPUs, especially Nouveau setups with multiple displays.",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/quick-notes-are-missing-from-the-bar",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/quick-notes-are-missing-from-the-bar/RECIPE.md",
+          "title": "Quick notes are missing from the bar",
+          "summary": "Install the OmaNano local Markdown notes widget.",
+          "version": 1,
+          "applies_to": "Omarchy shell with third-party plugins.",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2",
+            "omanano": "0.1.4"
+          },
+          "root": false,
+          "network": true,
+          "installs": [
+            "io.github.agata.omanano"
+          ],
+          "runs": [
+            "OmaNano widget while the shell runs"
+          ],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/screensaver-and-lock-start-too-soon",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/screensaver-and-lock-start-too-soon/RECIPE.md",
+          "title": "Screensaver and lock start too soon",
+          "summary": "Wait 450 seconds for the screensaver and 600 seconds to lock.",
+          "version": 1,
+          "applies_to": "Omarchy shell idle handling.",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/super-backspace-does-not-delete-a-line",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/super-backspace-does-not-delete-a-line/RECIPE.md",
+          "title": "Super+Backspace does not delete the current line",
+          "summary": "Send Home, Shift+End, and Backspace as one compositor sequence.",
+          "version": 1,
+          "applies_to": "Text fields and editors with conventional Home/End navigation.",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/universal-copy-does-not-work-in-ghostty",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/universal-copy-does-not-work-in-ghostty/RECIPE.md",
+          "title": "Universal copy does not work reliably in Ghostty",
+          "summary": "Send Ctrl+Shift+C to tagged terminals and Ctrl+C elsewhere.",
+          "version": 1,
+          "applies_to": "Terminals tagged by Omarchy, including Ghostty.",
+          "requires": [],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2",
+            "ghostty": "1.3.1"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [
+            "one-shot 50 ms key-release timer"
+          ],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        },
+        {
+          "id": "campeterson41/volume-keys-feel-slow-when-held",
+          "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/volume-keys-feel-slow-when-held/RECIPE.md",
+          "title": "Volume keys feel slow when held",
+          "summary": "Change PipeWire volume immediately and update the OSD in a shared background worker.",
+          "version": 1,
+          "applies_to": "Keyboards exposing F8/F10/F11/F12.",
+          "requires": [
+            {
+              "command": "wpctl"
+            },
+            {
+              "command": "omarchy-osd"
+            },
+            {
+              "command": "flock"
+            }
+          ],
+          "tested_on": {
+            "omarchy": "4.0.4",
+            "hyprland": "0.56.2"
+          },
+          "root": false,
+          "network": false,
+          "installs": [],
+          "runs": [],
+          "agent_config": false,
+          "history": [
+            {
+              "who": "campeterson41",
+              "did": "created",
+              "date": "2026-10-05"
+            }
+          ]
+        }
+      ]
     },
     {
       "repo": "duff/omarchy-cookbook",
@@ -2006,6 +2684,226 @@
     }
   ],
   "recipes": {
+    "campeterson41/apple-function-row-sends-media-keys": {
+      "title": "Apple function row sends media keys instead of F keys",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/apple-function-row-sends-media-keys/RECIPE.md"
+    },
+    "campeterson41/apple-keyboard-has-no-screenshot-key": {
+      "title": "Apple keyboard has no Print Screen key",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/apple-keyboard-has-no-screenshot-key/RECIPE.md"
+    },
+    "campeterson41/bar-background-is-too-solid": {
+      "title": "Bar background is too solid",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-background-is-too-solid/RECIPE.md"
+    },
+    "campeterson41/bar-clock-is-not-in-12-hour-format": {
+      "title": "Bar clock is not in 12-hour format",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-clock-is-not-in-12-hour-format/RECIPE.md"
+    },
+    "campeterson41/bar-does-not-show-computer-headroom": {
+      "title": "Bar does not show computer headroom",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-does-not-show-computer-headroom/RECIPE.md"
+    },
+    "campeterson41/bar-has-no-button-for-a-custom-workspace": {
+      "title": "Bar has no button for a custom workspace launcher",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bar-has-no-button-for-a-custom-workspace/RECIPE.md"
+    },
+    "campeterson41/battery-percentage-is-missing-from-the-bar": {
+      "title": "Battery percentage is missing from the bar",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/battery-percentage-is-missing-from-the-bar/RECIPE.md"
+    },
+    "campeterson41/bluetooth-speaker-needs-manual-a2dp-recovery": {
+      "title": "Bluetooth speaker needs manual A2DP recovery",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/bluetooth-speaker-needs-manual-a2dp-recovery/RECIPE.md"
+    },
+    "campeterson41/browser-profile-launcher-opens-the-wrong-account": {
+      "title": "Browser profile launcher opens the wrong account",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/browser-profile-launcher-opens-the-wrong-account/RECIPE.md"
+    },
+    "campeterson41/dashboard-group-opens-on-a-busy-workspace": {
+      "title": "Dashboard group opens on a busy workspace",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dashboard-group-opens-on-a-busy-workspace/RECIPE.md"
+    },
+    "campeterson41/dictated-text-types-slowly": {
+      "title": "Dictated text types slowly even with zero configured delay",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dictated-text-types-slowly/RECIPE.md"
+    },
+    "campeterson41/dictation-waits-too-long-after-key-release": {
+      "title": "Dictation waits too long after key release",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dictation-waits-too-long-after-key-release/RECIPE.md"
+    },
+    "campeterson41/dock-audio-takes-over-laptop-speakers": {
+      "title": "Dock audio takes over the laptop speakers",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/dock-audio-takes-over-laptop-speakers/RECIPE.md"
+    },
+    "campeterson41/heavy-agent-jobs-make-the-desktop-unresponsive": {
+      "title": "Heavy agent jobs make the desktop unresponsive",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/heavy-agent-jobs-make-the-desktop-unresponsive/RECIPE.md"
+    },
+    "campeterson41/mixed-dpi-monitors-overlap-or-change-position": {
+      "title": "Mixed-DPI monitors overlap or change position",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/mixed-dpi-monitors-overlap-or-change-position/RECIPE.md"
+    },
+    "campeterson41/nouveau-pointer-disappears-on-laptop-screen": {
+      "title": "Nouveau pointer disappears on the laptop screen",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/nouveau-pointer-disappears-on-laptop-screen/RECIPE.md"
+    },
+    "campeterson41/older-gpu-desktop-animations-stutter": {
+      "title": "Older GPU desktop animations stutter",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/older-gpu-desktop-animations-stutter/RECIPE.md"
+    },
+    "campeterson41/quick-notes-are-missing-from-the-bar": {
+      "title": "Quick notes are missing from the bar",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/quick-notes-are-missing-from-the-bar/RECIPE.md"
+    },
+    "campeterson41/screensaver-and-lock-start-too-soon": {
+      "title": "Screensaver and lock start too soon",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/screensaver-and-lock-start-too-soon/RECIPE.md"
+    },
+    "campeterson41/super-backspace-does-not-delete-a-line": {
+      "title": "Super+Backspace does not delete the current line",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/super-backspace-does-not-delete-a-line/RECIPE.md"
+    },
+    "campeterson41/universal-copy-does-not-work-in-ghostty": {
+      "title": "Universal copy does not work reliably in Ghostty",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/universal-copy-does-not-work-in-ghostty/RECIPE.md"
+    },
+    "campeterson41/volume-keys-feel-slow-when-held": {
+      "title": "Volume keys feel slow when held",
+      "created_by": "campeterson41",
+      "upstream": null,
+      "cookbooks": [
+        "campeterson41/omarchy-cookbook"
+      ],
+      "adapted_into": [],
+      "url": "https://github.com/campeterson41/omarchy-cookbook/blob/0041bbe/recipes/volume-keys-feel-slow-when-held/RECIPE.md"
+    },
     "duff/1password-locks-every-time-the-screen-locks": {
       "title": "1Password locks every time the screen locks",
       "created_by": "duff",
